@@ -45,7 +45,8 @@
 							<div class="logo">
 							</div>
 							<h2>SUMALE VALOR A TUS EVENTOS</h2>
-							<p>Planear, organizar y celebrar un evento, puede ser divertido pero no es una tarea sencilla, no por ello hay que dejar de disfrutarlo. Fue por eso que decidí comenzar SVAT Eventos. Donde te ayudo a organizar el evento a tu medida. Nuestro objetivo es ocuparnos de todo para que puedas disfrutar de un momento especial y único. Como Organizadora de eventos profesional, mi combinación de creatividad y atención a los detalles van a hacer que disfrutes al máximo tu evento tan esperado.</a></p>
+							<p>Planear, organizar y celebrar un evento, puede ser divertido pero no es una tarea sencilla, no por ello hay que dejar de disfrutarlo. Fue por eso que decidí comenzar SVAT Eventos. Donde te ayudo a organizar el evento a tu medida. 
+								Nuestro objetivo es ocuparnos de todo para que puedas disfrutar de un momento especial y único. Como Organizadora de eventos profesional, mi combinación de creatividad y atención a los detalles van a hacer que disfrutes al máximo tu evento tan esperado.</a></p>
 						</div>
 					</section>
 
@@ -134,25 +135,29 @@
 						<div class="inner">
 							<h2 class="major">Contactate con nosotros</h2>
 							<p>Queremos conocerte y conocer tus ideas, gustos y asi ayudarte a hacer tu idea realidad, no dudes en contactarnos sin compromiso de compra</p>
-							<form method="post" action="mailto:svateventos@gmail.com" enctype="text/plain"> 
+						<!--	<form method="post" action="mailto:svateventos@gmail.com" enctype="text/plain"> -->
+							<!-- https://docs.google.com/forms/d/e/1FAIpQLSc1bPQJDDLKxmCKK2k6DoY7LROhx2DKJuPN7aIeOQy-32JHlw/formResponse? --> 	
+							<!-- https://docs.google.com/forms/d/e/1FAIpQLSfy4noj_yeaBb-iYFLTcGrDLlWu67k0bku4EL1xPKshJ-PiNw/viewform?usp=pp_url&entry.1990269610=Test1&entry.1053521172=Test@pepe.com&entry.387198061=texto+de+prueba -->
+							<form name="gform" id="gform" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSfy4noj_yeaBb-iYFLTcGrDLlWu67k0bku4EL1xPKshJ-PiNw/formResponse?" enctype="application/x-www-form-urlencoded" target="hidden_iframe" onsubmit="submitted=true;"> 
 								<div class="fields">
 									<div class="field">
 										<label for="name">Nombre</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="entry.1990269610" id="entry.1990269610" />
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<input type="email" name="entry.1053521172" id="entry.1053521172" />
 									</div>
 									<div class="field">
 										<label for="message">Mensaje</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+										<textarea name="entry.387198061" id="entry.387198061" rows="4"></textarea>
 									</div>
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="Enviar" /></li>
 								</ul>
 							</form>
+							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 							<ul class="contact">
 								<li class="icon solid fa-home">
 									Villa Ballester<br />
@@ -179,6 +184,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- Scripts to get notify that the google form was procesed -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script type="text/javascript">var submitted=false;</script>
+			<script type="text/javascript">
+			$('#gform').on('submit', function(e) {
+				$('#gform *').fadeOut(2000);
+				$('#gform').prepend('Tu mensaje fue enviado...');
+				});
+			</script>
 
 	</body>
 </html>
