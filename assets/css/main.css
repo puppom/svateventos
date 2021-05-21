@@ -273,6 +273,9 @@ input, select, textarea {
 			padding-bottom: 1em;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 		}
+		h2.major {
+			color: #F2D164
+		}
 
 	h2 {
 		font-size: 1.2em;
